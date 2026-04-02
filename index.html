@@ -18,7 +18,7 @@
     --text:           #1a1a1a;
     --text-soft:      #333333;
     --text-muted:     #555555;
-
+ 
     --persona:        #006666;
     --persona-light:  #d4f0f0;
     --mission:        #1a5276;
@@ -29,17 +29,17 @@
     --data-light:     #fde8cc;
     --output:         #5b2c8d;
     --output-light:   #ece0f7;
-
+ 
     --radius: 10px;
     --shadow: 0 4px 20px rgba(0,80,80,0.12);
     --shadow-lg: 0 8px 36px rgba(0,80,80,0.22);
-
+ 
     /* sidebar width reduced by 1/4 from 300px → 225px */
     --sidebar-width: 225px;
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   body {
     font-family: 'Source Sans 3', sans-serif;
     background: var(--bg);
@@ -49,7 +49,7 @@
     flex-direction: column;
     font-size: 17px;
   }
-
+ 
   /* ── HEADER ── */
   header {
     background: var(--teal-deeper);
@@ -69,7 +69,7 @@
     letter-spacing: 0.02em;
   }
   header h1 span { color: #7fdfdf; }
-
+ 
   /* logo replaces header-tag */
   .header-logo {
     height: 44px;
@@ -81,7 +81,7 @@
     opacity: 0.92;
     border-radius: 4px;
   }
-
+ 
   /* ── LAYOUT ── */
   .app {
     display: flex;
@@ -89,7 +89,7 @@
     overflow: hidden;
     height: calc(100vh - 76px);
   }
-
+ 
   /* ── SIDEBAR ── */
   .sidebar {
     width: var(--sidebar-width);
@@ -155,7 +155,7 @@
     letter-spacing: 0.04em;
   }
   .add-prompt-btn:hover { background: rgba(255,255,255,0.14); }
-
+ 
   /* ── MAIN ── */
   .main {
     flex: 1;
@@ -166,7 +166,7 @@
     gap: 28px;
     background: var(--bg);
   }
-
+ 
   .prompt-title {
     font-family: 'Libre Baskerville', Georgia, serif;
     font-size: 2rem;
@@ -182,7 +182,7 @@
     max-width: 620px;
     line-height: 1.7;
   }
-
+ 
   /* ── LEGEND ── */
   .legend { display: flex; flex-wrap: wrap; gap: 10px; }
   .legend-item {
@@ -211,7 +211,7 @@
   .dot-behaviour { background: var(--behaviour); }
   .dot-data      { background: var(--data); }
   .dot-output    { background: var(--output); }
-
+ 
   /* ── TWO COLUMN ── */
   .content-grid {
     display: grid;
@@ -219,7 +219,7 @@
     gap: 28px;
     align-items: start;
   }
-
+ 
   /* ── PROMPT BOX ── */
   .prompt-box {
     background: var(--white);
@@ -246,7 +246,7 @@
   .td-red   { background: #ff5f57; }
   .td-amber { background: #febc2e; }
   .td-green { background: #28c840; }
-
+ 
   /* ── PROMPT CONTENT — readable prose style ── */
   .prompt-content {
     padding: 28px 32px;
@@ -258,7 +258,7 @@
     word-break: break-word;
     background: #f5fefe;
   }
-
+ 
   /* ── HIGHLIGHTS ── */
   .hl {
     border-radius: 4px;
@@ -273,7 +273,7 @@
   .hl.hl-data      { background: var(--data-light);      color: var(--data);      border-bottom: 2px solid var(--data);      }
   .hl.hl-output    { background: var(--output-light);    color: var(--output);    border-bottom: 2px solid var(--output);    }
   .hl.selected { box-shadow: 0 0 0 2px currentColor; }
-
+ 
   /* ── PANEL ── */
   .panel {
     position: sticky;
@@ -325,7 +325,7 @@
     line-height: 1.6;
     font-weight: 500;
   }
-
+ 
   .lc-persona   { --active-color: var(--persona);   }
   .lc-mission   { --active-color: var(--mission);   }
   .lc-behaviour { --active-color: var(--behaviour); }
@@ -346,7 +346,7 @@
   .lc-behaviour .workshop-tip { background: var(--behaviour-light); color: var(--behaviour); }
   .lc-data      .workshop-tip { background: var(--data-light);      color: var(--data);      }
   .lc-output    .workshop-tip { background: var(--output-light);    color: var(--output);    }
-
+ 
   /* ── IO TABLE ── */
   .io-table-wrap {
     background: var(--white);
@@ -378,7 +378,7 @@
     color: var(--text); line-height: 1.5;
   }
   tr:hover td { background: #f0fafa; }
-
+ 
   /* ── FOOTER ── */
   .footer-bar {
     background: var(--teal-deeper);
@@ -396,11 +396,11 @@
     font-size: 0.88rem;
     color: rgba(255,255,255,0.65);
   }
-
+ 
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--teal-mid); border-radius: 10px; }
-
+ 
   @media (max-width: 1000px) {
     .content-grid { grid-template-columns: 1fr; }
     .panel { position: static; }
@@ -415,14 +415,14 @@
 </style>
 </head>
 <body>
-
+ 
 <header>
   <h1>Prompt Library — <span>AI for Executive Communications</span></h1>
   <img src="logo.jpg" alt="Global Speechwriter" class="header-logo">
 </header>
-
+ 
 <div class="app">
-
+ 
   <nav class="sidebar">
     <div class="sidebar-label">Prompt Library</div>
     <div class="prompt-item active" data-prompt="0">
@@ -449,14 +449,14 @@
     <div class="sidebar-divider"></div>
     <button class="add-prompt-btn">+ Add Prompt</button>
   </nav>
-
+ 
   <main class="main">
-
+ 
     <div>
       <div class="prompt-title">Communications Strategy Development</div>
       <div class="prompt-description">An agentic, interview-driven prompt that guides a structured Q&amp;A session before generating a full communications strategy and action plan. Click any highlighted section to learn what that layer does.</div>
     </div>
-
+ 
     <div class="legend">
       <div class="legend-item leg-persona" onclick="filterLayer('persona')"><div class="legend-dot dot-persona"></div> Persona</div>
       <div class="legend-item leg-mission" onclick="filterLayer('mission')"><div class="legend-dot dot-mission"></div> Mission</div>
@@ -464,7 +464,7 @@
       <div class="legend-item leg-data" onclick="filterLayer('data')"><div class="legend-dot dot-data"></div> Data Architecture</div>
       <div class="legend-item leg-output" onclick="filterLayer('output')"><div class="legend-dot dot-output"></div> Output Spec</div>
     </div>
-
+ 
     <div class="content-grid">
       <div>
         <div class="prompt-box">
@@ -476,7 +476,7 @@
           </div>
           <div class="prompt-content" id="promptContent"></div>
         </div>
-
+ 
         <div class="io-table-wrap">
           <div class="io-table-title">Input → Output Map</div>
           <table>
@@ -493,9 +493,9 @@
           </table>
         </div>
       </div>
-
+ 
       <div class="panel">
-
+ 
         <div class="layer-card lc-persona" id="card-persona" onclick="toggleCard('persona')">
           <div class="layer-card-header">
             <div class="layer-number">1</div>
@@ -506,7 +506,7 @@
             <div class="workshop-tip">💡 <strong>Try this live:</strong> Remove "interviewer" from the prompt and run it again. Watch it collapse into a form instead of a conversation.</div>
           </div>
         </div>
-
+ 
         <div class="layer-card lc-mission" id="card-mission" onclick="toggleCard('mission')">
           <div class="layer-card-header">
             <div class="layer-number">2</div>
@@ -517,7 +517,7 @@
             <div class="workshop-tip">💡 <strong>Key concept:</strong> This is <em>phased prompting</em> — one of the most underused techniques in professional AI workflows.</div>
           </div>
         </div>
-
+ 
         <div class="layer-card lc-behaviour" id="card-behaviour" onclick="toggleCard('behaviour')">
           <div class="layer-card-header">
             <div class="layer-number">3</div>
@@ -528,7 +528,7 @@
             <div class="workshop-tip">💡 <strong>Tell your audience:</strong> "This is the difference between AI as a vending machine and AI as a thinking partner."</div>
           </div>
         </div>
-
+ 
         <div class="layer-card lc-data" id="card-data" onclick="toggleCard('data')">
           <div class="layer-card-header">
             <div class="layer-number">4</div>
@@ -539,7 +539,7 @@
             <div class="workshop-tip">💡 <strong>Point out:</strong> Every question in the interview has a corresponding output section. See the Input → Output Map below the prompt.</div>
           </div>
         </div>
-
+ 
         <div class="layer-card lc-output" id="card-output" onclick="toggleCard('output')">
           <div class="layer-card-header">
             <div class="layer-number">5</div>
@@ -550,115 +550,115 @@
             <div class="workshop-tip">💡 <strong>Key insight:</strong> Most people write the output spec last or skip it entirely. It should be designed <em>first</em>.</div>
           </div>
         </div>
-
+ 
       </div>
     </div>
-
+ 
   </main>
 </div>
-
+ 
 <div class="footer-bar">
   <div>Click any <strong>highlighted section</strong> in the prompt to reveal what that layer does — or click a layer card on the right.</div>
   <div class="footer-brand">© Brent Kerrigan · globalspeechwriter.com</div>
 </div>
-
+ 
 <script>
 const promptHTML = `<span class="hl hl-persona" data-layer="persona">Role: You are a world-class director of strategic communications and an expert interviewer who understands how to extract the most strategy, creativity, and original thought from your subject.</span>
-
+ 
 <span class="hl hl-mission" data-layer="mission">Mission: I want you to guide me through a structured Q&A to gather the inputs needed in order to craft a comprehensive Communications Strategy & Action Plan for [insert specifics here]. Following the collection of data and all answers have been collected, I want you to compile them into a first draft plan that follows the outline below.</span>
-
+ 
 <span class="hl hl-behaviour" data-layer="behaviour">Specifics of Interview: I want you to:
-
+ 
 • Ask the questions sequentially, one section at a time.
-
+ 
 • Wait for my response before moving to the next block.
-
+ 
 • Ask for more information if answer doesn't provide enough context.
-
+ 
 • Push me to give as much detailed information and context possible and push me when I need to be more creative or could take an idea further.</span>
-
+ 
 <span class="hl hl-data" data-layer="data">Section 1 - Organisational Context
-
+ 
 Q1a. What is your organisation's mission and current positioning?
-
+ 
 Q1b. Are you launching a product, policy, fund raise, or campaign?
-
+ 
 Section 2 - Strategic Goal(s)
-
+ 
 Q2a. What is the primary communications goal?
-
+ 
 Q2b. List any secondary goals.
-
+ 
 Section 3 - Primary Audiences
-
+ 
 Q3a. Who are the priority external audiences?
-
+ 
 Q3b. Any critical internal stakeholders?
-
+ 
 Q3c. Known audience pain points or motivations?
-
+ 
 Section 4 - Timeline & Key Milestones
-
+ 
 Q4a. List major dates/events for the next 6–12 months.
-
+ 
 Q4b. Any non-negotiable deadlines?
-
+ 
 Section 5 - Resources & Constraints
-
+ 
 Q5a. What budget and staff are available?
-
+ 
 Q5b. List any legal, brand, or risk constraints.
-
+ 
 Section 6 - Existing Research / Insights
-
+ 
 Q6a. Do you have audience surveys, channel analytics, SWOT, persona docs?
-
+ 
 Q6b. Summarise key findings or paste excerpts.
-
+ 
 Section 7 - Success Metrics
-
+ 
 Q7a. How will leadership judge success?
-
+ 
 Q7b. Any mandatory KPIs (e.g., media hits, pipeline value, engagement rate)?
-
+ 
 After The Interview:
-
+ 
 • Confirm you have all required information.
-
+ 
 • Provide opportunity to add intangibles or points for consideration.
-
+ 
 • If gaps remain, ask follow-up questions.</span>
-
+ 
 <span class="hl hl-output" data-layer="output">Then generate your suggested draft Communications Strategy that includes:
-
+ 
 1. Executive Summary (1 page)
-
+ 
 2. SMART Objectives & KPI Table
-
+ 
 3. Audience Matrix (segment | need | message | best channel)
-
+ 
 4. Core Message House (headline + 3 proof points + CTA)
-
+ 
 5. Channel & Tactics Calendar (high level)
-
+ 
 6. Measurement Dashboard (metrics + cadence)
-
+ 
 7. Risk Register & Mitigations
-
+ 
 8. Appendix (any supplied research snippets)
-
+ 
 Formatting and Delivery:
-
+ 
 • Use plain English; minimal jargon.
-
+ 
 • Insert tables where indicated.
-
+ 
 • Flag "[decision needed]" for any sections requiring leadership input.
-
+ 
 Begin the interview now.</span>`;
-
+ 
 document.getElementById('promptContent').innerHTML = promptHTML;
-
+ 
 document.querySelectorAll('.hl').forEach(el => {
   el.addEventListener('click', () => {
     const layer = el.dataset.layer;
@@ -667,7 +667,7 @@ document.querySelectorAll('.hl').forEach(el => {
     document.querySelectorAll(`.hl[data-layer="${layer}"]`).forEach(h => h.classList.add('selected'));
   });
 });
-
+ 
 function toggleCard(layer) {
   const body = document.getElementById('body-' + layer);
   const card = document.getElementById('card-' + layer);
@@ -676,7 +676,7 @@ function toggleCard(layer) {
   if (!isOpen) { body.classList.add('open'); card.classList.add('active'); highlightLayer(layer); }
   else { clearHighlights(); }
 }
-
+ 
 function openCard(layer) {
   closeAll();
   const body = document.getElementById('body-' + layer);
@@ -685,29 +685,29 @@ function openCard(layer) {
   highlightLayer(layer);
   card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
-
+ 
 function closeAll() {
   ['persona','mission','behaviour','data','output'].forEach(l => {
     document.getElementById('body-' + l).classList.remove('open');
     document.getElementById('card-' + l).classList.remove('active');
   });
 }
-
+ 
 function highlightLayer(layer) {
   document.querySelectorAll('.hl').forEach(h => {
     h.style.opacity = h.dataset.layer === layer ? '1' : '0.25';
   });
 }
-
+ 
 function clearHighlights() {
   document.querySelectorAll('.hl').forEach(h => { h.style.opacity = '1'; h.classList.remove('selected'); });
 }
-
+ 
 function filterLayer(layer) {
   document.querySelectorAll('.legend-item').forEach(i => i.classList.remove('active-filter'));
   openCard(layer);
 }
-
+ 
 document.querySelectorAll('.prompt-item[data-prompt]').forEach(item => {
   item.addEventListener('click', () => {
     if (item.dataset.prompt === 'placeholder') return;
@@ -716,6 +716,6 @@ document.querySelectorAll('.prompt-item[data-prompt]').forEach(item => {
   });
 });
 </script>
-
+ 
 </body>
 </html>
